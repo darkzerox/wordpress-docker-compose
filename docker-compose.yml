@@ -44,7 +44,7 @@ services:
       MYSQL_ROOT_PASSWORD: "${DB_ROOT_PASSWORD}"
   pma: # add phpmyadmin
     image: phpmyadmin/phpmyadmin
-    container_name: lemp-phpmyadmin
+    container_name: phpmyadmin
     restart: always
     ports:
       - "8000:80"
