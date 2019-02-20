@@ -42,6 +42,11 @@ services:
     environment:
       MYSQL_DATABASE: "${DB_NAME}"
       MYSQL_ROOT_PASSWORD: "${DB_ROOT_PASSWORD}"
-
+  pma: # add phpmyadmin
+    image: phpmyadmin/phpmyadmin
+    container_name: lemp-phpmyadmin
+    restart: always
+    ports:
+      - "8000:80"
 volumes:
   db_data:
