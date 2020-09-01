@@ -1,5 +1,3 @@
 .vscode
-wp-app
 wp-data
-!wp-app/wp-content/themes/${THEME}
 **/node_modules/**

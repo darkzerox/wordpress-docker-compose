@@ -8,12 +8,9 @@ services:
       - 80:80 # change ip if required
     volumes:
       - ./config/php.conf.ini:/usr/local/etc/php/conf.d/conf.ini
-      - ./wp-app:/var/www/html # Full wordpress project
-      - ./wp-theme/magnetolabs/:/var/www/html/wp-content/themes/magnetolabs #master template
-      - ./wp-theme/${THEME}/:/var/www/html/wp-content/themes/${THEME}
-
-
-      # - ./plugin-name/trunk/:/var/www/html/wp-content/plugins/plugin-name
+      # - ./wp-app:/var/www/html # Full wordpress project
+      - ./themes/${PARENT_THEME}:/var/www/html/wp-content/themes/${PARENT_THEME} #master template
+      - ./themes/${THEME}:/var/www/html/wp-content/themes/${THEME}
 
     environment:
       WORDPRESS_DB_HOST: db
@@ -28,16 +25,16 @@ services:
     depends_on:
       - db
 
-  wpcli:
-    container_name: ${DOMAIN}_wpcli
+  # wpcli:
+  #   container_name: ${DOMAIN}_wpcli
 
-    image: wordpress:cli
-    volumes:
-      - ./config/php.conf.ini:/usr/local/etc/php/conf.d/conf.ini
-      - ./wp-app:/var/www/html
-    depends_on:
-      - db
-      - wp
+  #   image: wordpress:cli
+  #   volumes:
+  #     - ./config/php.conf.ini:/usr/local/etc/php/conf.d/conf.ini
+  #     - ./wp-app:/var/www/html
+  #   depends_on:
+  #     - db
+  #     - wp
 
   db:
     container_name: ${DOMAIN}_db
