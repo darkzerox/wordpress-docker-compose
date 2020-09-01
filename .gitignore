@@ -1,3 +1,4 @@
 .vscode
 wp-data
 **/node_modules/**
+plugins

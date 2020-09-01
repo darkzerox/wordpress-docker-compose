@@ -11,6 +11,7 @@ services:
       # - ./wp-app:/var/www/html # Full wordpress project
       - ./themes/${PARENT_THEME}:/var/www/html/wp-content/themes/${PARENT_THEME} #master template
       - ./themes/${THEME}:/var/www/html/wp-content/themes/${THEME}
+      - ./plugins:/var/www/html/wp-content/plugins
 
     environment:
       WORDPRESS_DB_HOST: db
