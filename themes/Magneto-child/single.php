@@ -34,8 +34,4 @@ get_header(); ?>
 </div> <!-- .container -->
 
 
-
-<?php dzx_subscribe(); ?>
-
-
 <?php get_footer();

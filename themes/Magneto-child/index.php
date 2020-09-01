@@ -13,13 +13,12 @@ get_header(); ?>
       <div class="row">
         <div class="col-sm-12">
           <?php
-          // if ( function_exists('yoast_breadcrumb') ) {
-          //     yoast_breadcrumb( '<div id="breadcrumbs">','</div>' );
-          // }
+// if ( function_exists('yoast_breadcrumb') ) {
+//     yoast_breadcrumb( '<div id="breadcrumbs">','</div>' );
+// }
 ?>
 
-          <?php 
-          if (is_page('blog')) {
+          <?php if (is_page('blog')) {
             the_archive_title('<h1 class="page-title h2 dark">', '</h1>');
             the_archive_description(
               '<div class="archive-description">',
@@ -36,10 +35,7 @@ get_header(); ?>
                     get_the_title($page_for_posts)
                   ); ?>
                   <div class="blog-description s2 text-center">
-                    <?php echo get_field(
-                          'blog_page_description',
-                          $page_for_posts
-                        ); ?>
+
                   </div>
                 </div><!-- /.col-sm-12 -->
               </div><!-- /.row -->
@@ -61,8 +57,9 @@ get_header(); ?>
               <?php if (have_posts()): ?>
               <?php
               while (have_posts()):
+
                 the_post();
-                
+
                 if (is_sticky()) { ?>
               <div class="col-lg-12 pr-lg-5 col-sm-12">
                 <?php get_template_part(

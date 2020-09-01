@@ -368,36 +368,3 @@ function magneto_related_posts($args = [])
 <?php }
   wp_reset_postdata();
 }
-
-function dzx_subscribe()
-{
-  ?>
-<div class="section-subscribe bg-gray">
-  <div class="container">
-    <div class="hero ">
-      <div class="hero-body">
-        <div class="columns">
-          <div class="colum col-5">
-            <h2><?php echo get_field('subscribe_title', 'option'); ?></h2>
-            <p class="font-head"><?php echo get_field(
-              'subscribe_description',
-              'option'
-            ); ?></p>
-
-          </div><!-- /.colum col-5 -->
-          <div class="column">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque impedit, dolores nesciunt fuga repellendus
-            nobis repudiandae ex ipsa, porro similique voluptatem voluptates accusantium doloremque id! Dignissimos
-            facilis qui eveniet explicabo?
-          </div><!-- /.column -->
-
-        </div><!-- /.columns -->
-      </div>
-    </div>
-  </div><!-- /.container -->
-
-</div><!-- /.section-subscribe -->
-
-
-<?php
-}
