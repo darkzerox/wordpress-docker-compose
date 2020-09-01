@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 
 services:
   wp:
@@ -8,13 +8,16 @@ services:
     volumes:
       - ./config/php.conf.ini:/usr/local/etc/php/conf.d/conf.ini
       - ./wp-app:/var/www/html # Full wordpress project
-      #- ./plugin-name/trunk/:/var/www/html/wp-content/plugins/plugin-name # Plugin development
-      #- ./theme-name/trunk/:/var/www/html/wp-content/themes/theme-name # Theme development
     environment:
       WORDPRESS_DB_HOST: db
       WORDPRESS_DB_NAME: "${DB_NAME}"
       WORDPRESS_DB_USER: root
       WORDPRESS_DB_PASSWORD: "${DB_ROOT_PASSWORD}"
+      ORDPRESS_DEBUG: 1
+      WORDPRESS_CONFIG_EXTRA: | # Add config to wp-config.php
+        define('FS_METHOD', 'direct');
+        define('WP_DEBUG_LOG', true);
+        define( 'WP_DEBUG', true );
     depends_on:
       - db
 
@@ -31,11 +34,12 @@ services:
     image: mysql:latest # https://hub.docker.com/_/mysql/ - or mariadb https://hub.docker.com/_/mariadb
     ports:
       - ${IP}:3306:3306 # change ip if required
-    command: [
-        '--default_authentication_plugin=mysql_native_password',
-        '--character-set-server=utf8mb4',
-        '--collation-server=utf8mb4_unicode_ci'
-    ]
+    command:
+      [
+        "--default_authentication_plugin=mysql_native_password",
+        "--character-set-server=utf8mb4",
+        "--collation-server=utf8mb4_unicode_ci",
+      ]
     volumes:
       - ./wp-data:/docker-entrypoint-initdb.d
       - db_data:/var/lib/mysql
