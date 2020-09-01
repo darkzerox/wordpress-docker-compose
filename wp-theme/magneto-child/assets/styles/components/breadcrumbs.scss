@@ -1,0 +1,28 @@
+#breadcrumbs {
+  font-size: $font-size-xs;
+  color: $primary;
+  letter-spacing: 0.63px;
+  margin-bottom: 25px;
+
+  span,
+  a {
+    font-family: $font-head;
+  }
+
+  a {
+    color: $dark;
+    font-weight: 300;
+  }
+
+  @include respon-down(md) {
+    font-size: 14px;
+  }
+
+  &:empty {
+    display: none;
+  }
+
+  .breadcrumb_last {
+    display: none;
+  }
+}

@@ -1,0 +1,77 @@
+@import "../main";
+@import "../components/quote";
+@import "../components/post-item";
+@import "../components/breadcrumbs";
+@import "../components/subscribe";
+
+.post-meta {
+  margin-top: 5px;
+
+  a,
+  .date {
+    font-family: $font-head;
+    font-size: $font-size-xs;
+  }
+
+  .category-head {
+    padding-right: 20px;
+    border-right: solid 1px $border-color;
+  }
+
+  .date {
+    padding-left: 20px;
+  }
+
+  .post-tags {
+    margin-top: 50px;
+
+    a {
+      margin-left: 5px;
+    }
+
+    a,
+    .tags-title {
+      font-size: $font-size-md
+    }
+  }
+
+}
+
+.post-feature-img {
+  text-align: center;
+
+  img {
+    width: 100%;
+  }
+}
+
+.wp-caption {
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+
+.wp-caption-text {
+  text-align: center;
+  width: 100%;
+  font-size: $h6-font-size;
+  margin: 15px 0px;
+  font-weight: 100;
+}
+
+.seed-social {
+  .count {
+    color: $primary;
+  }
+
+  a {
+    color: $black;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+.relate-post {
+  margin-top: 90px;
+}

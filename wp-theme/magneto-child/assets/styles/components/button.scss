@@ -1,0 +1,47 @@
+.btn {
+  padding: 5px 15px;
+  line-height: 1rem;
+  font-family: $font-head;
+
+  // Button secondary
+  &.btn-secondary {
+    background: $secondary;
+    border-color: $secondary;
+    color: $light;
+
+    &:focus,
+    &:hover {
+      background: darken($secondary-color-dark, 2%);
+      border-color: darken($secondary-color-dark, 5%);
+      color: $light;
+    }
+
+    &:active,
+    &.active {
+      background: darken($secondary-color-dark, 4%);
+      border-color: darken($secondary-color-dark, 7%);
+      color: $light;
+    }
+
+    &.loading {
+      &::after {
+        border-bottom-color: $light;
+        border-left-color: $light;
+      }
+    }
+  }
+}
+
+.read-more {
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    border-top: solid $secondary 1px;
+    transform: translate(0, -50%);
+    top: 50%;
+    right: -50px;
+  }
+}

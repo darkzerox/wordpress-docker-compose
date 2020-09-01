@@ -1,0 +1,165 @@
+.single {
+  .seed-social {
+
+    svg {
+      color: $dark;
+      max-width: 18px;
+    }
+
+    .count {
+      @extend .h1;
+      color: $primary;
+    }
+
+    .count-label {
+      color: $gray-600;
+      font-size: 12px;
+    }
+
+    &>div {
+      padding: 2px;
+    }
+  }
+}
+
+.social-share-header-content .seed-social {
+  padding-top: 0px !important;
+}
+
+.social-share-footer-content {
+  .seed-social {
+    position: relative;
+    top: 0 !important;
+    display: flex;
+    width: 100% !important;
+    left: 0 !important;
+    padding-top: 30px;
+    vertical-align: middle;
+    align-items: flex-end;
+
+    a {
+      font-size: $h4-font-size;
+    }
+  }
+
+  .seed-social>div {
+    padding: 0 15px;
+
+    i {
+      font-size: $h4-font-size;
+    }
+  }
+
+  .seed-social .all-count {
+    margin: 0;
+    display: flex;
+    align-items: center;
+
+    .count {
+      margin-right: 10px;
+      @extend .h1;
+      color: $primary;
+
+
+    }
+  }
+
+  .count-label {
+    color: $gray-600;
+    font-size: 12px;
+  }
+}
+
+@include respon-down(md) {
+  .seed-social {
+    position: fixed !important;
+    bottom: 0 !important;
+    top: unset !important;
+    display: flex;
+    width: 100% !important;
+    left: 0 !important;
+    background: #fff;
+    z-index: 3;
+  }
+
+  .seed-social>div {
+    width: 100%;
+    margin: 0;
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .seed-social .all-count {
+    justify-content: center;
+    margin: 0 15px !important;
+    width: 100px;
+
+    .count-label,
+    .count {
+      width: 100%;
+    }
+
+    .count {
+      @include respon-down(md) {
+        display: none;
+      }
+    }
+
+    .count-label {
+      @include respon-down(md) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+
+  .seed-social>div a {
+    width: 100%;
+  }
+}
+
+
+.seed-social-bar.inline {
+  .seed-social {
+    position: relative !important;
+    top: 0 !important;
+    right: 0 !important;
+    display: flex;
+    justify-content: flex-end !important;
+    left: unset !important;
+
+    @include respon-down(md) {
+      justify-content: flex-start !important;
+    }
+
+    .count {
+      display: none;
+    }
+
+    .all-count {
+      display: flex;
+      align-items: center;
+      margin: 0;
+      width: 50px;
+    }
+
+  }
+
+  .social-group {
+    display: flex;
+    justify-content: flex-end;
+
+    @include respon-down(md) {
+      justify-content: flex-start !important;
+    }
+
+
+    &>div a {
+      color: #414141;
+      padding: 0 5px;
+    }
+  }
+
+}

@@ -1,0 +1,163 @@
+@import "../commons/variables";
+
+.comment-respond {
+  background-color: #fff;
+  padding: 30px;
+  border: 1px solid #f2f2fa;
+  border-radius: 0 3px 3px 3px;
+
+  #reply-title {
+    font-size: $font-size-md;
+    margin-bottom: 20px;
+  }
+
+  .comment-form-comment {
+    label {
+      display: none;
+    }
+  }
+
+  textarea {
+    border: 1px solid $form-border;
+    background-color: #ffffff;
+    height: 140px;
+  }
+
+  [class*="comment-form-"] {
+    label {
+      width: 100%;
+      color: $dark;
+      font-family: Ekachon;
+      font-size: 14px;
+      letter-spacing: 0;
+      line-height: 21px;
+
+      .required {
+        color: red;
+      }
+    }
+
+    input {
+      height: 40px;
+      border: 1px solid $form-border;
+      background-color: #ffffff;
+      width: 100%;
+    }
+  }
+
+  p.comment-form-author {
+    width: 50%;
+    float: left;
+    padding-right: 15px;
+
+    @include respon-down(md) {
+      width: 100%;
+      padding: 0;
+      float: none;
+    }
+  }
+
+  p.comment-form-email {
+    width: 50%;
+    float: right;
+    padding-left: 15px;
+
+    @include respon-down(md) {
+      width: 100%;
+      padding: 0;
+      float: none;
+    }
+  }
+
+  p.comment-form-url {
+    width: 100%;
+  }
+
+  [for="wp-comment-cookies-consent"] {
+    width: 85% !important;
+    margin-left: 10px;
+  }
+
+  input#wp-comment-cookies-consent {
+    width: 15px;
+    float: left;
+    height: 30px;
+  }
+
+  p.form-submit input {
+    border-radius: 3px;
+    background-color: $primary;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.44px;
+    line-height: 21px;
+    min-width: 200px;
+    border: 0;
+    text-transform: uppercase;
+  }
+
+  p.form-submit {
+    text-align: center;
+    padding-top: 10px !important;
+  }
+}
+
+.comment-list {
+  list-style: none !important;
+
+  .children {
+    list-style: none !important;
+  }
+
+  .comment-body {
+    background: #fff;
+    padding: 30px;
+    margin: 20px 0;
+    border: 1px solid #f2f2fa;
+    background-color: #ffffff;
+    position: relative;
+  }
+
+  .comment-author.vcard {
+    img {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      margin-right: 15px;
+    }
+
+    a {
+      color: $dark;
+    }
+  }
+
+  span.says {
+    display: none;
+  }
+
+  .comment-content {
+    margin-left: 65px;
+    margin-top: 25px;
+    color: $dark;
+    font-family: $font-blog;
+  }
+
+  .comment-metadata {
+    margin-left: 65px;
+    margin-top: -10px;
+
+    a {
+      color: $black;
+    }
+
+    time {
+      color: $black;
+      font-size: 14px;
+      letter-spacing: 0.33px;
+      line-height: 20px;
+    }
+  }
+
+
+}

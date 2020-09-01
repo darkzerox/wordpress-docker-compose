@@ -1,0 +1,13 @@
+{
+    "/public/scripts/archive.js": "/public/scripts/archive.js",
+    "/public/scripts/home.js": "/public/scripts/home.js",
+    "/public/scripts/main.js": "/public/scripts/main.js",
+    "/public/styles/gutenberg-editor-styles.css": "/public/styles/gutenberg-editor-styles.css",
+    "/public/styles/main.css": "/public/styles/main.css",
+    "/public/styles/archive.css": "/public/styles/archive.css",
+    "/public/styles/home.css": "/public/styles/home.css",
+    "/public/styles/single.css": "/public/styles/single.css",
+    "/public/styles/page.css": "/public/styles/page.css",
+    "/public/scripts/page.js": "/public/scripts/page.js",
+    "/public/scripts/single.js": "/public/scripts/single.js"
+}

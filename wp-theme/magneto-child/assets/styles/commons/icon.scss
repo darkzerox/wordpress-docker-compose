@@ -1,0 +1,85 @@
+.theme-icon {
+  max-width: 100px;
+  color: $primary;
+}
+
+.icon-arrow {
+  border: solid $primary;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 3px;
+
+  &.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+
+  &.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+  }
+
+  &.up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+  }
+
+  &.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+}
+
+.arrow {
+  position: relative;
+  margin-right: 15px;
+
+  &:after {
+    content: '';
+    border: solid $border-color;
+    border-width: 0 0.5px 0.5px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg) translate(0, -50%);
+    position: absolute;
+    right: -15px;
+    top: 50.1%;
+    transition: .3s;
+  }
+
+  &:hover:after {
+    right: -20px;
+  }
+
+  &.long {
+    margin-right: 70px;
+
+    &:hover {
+      &:after {
+        right: -72px;
+      }
+
+      &:before {
+        right: -20px;
+      }
+    }
+
+    &:after {
+      right: -66px;
+    }
+
+    &:before {
+      content: "";
+      width: 50px;
+      height: 1px;
+      right: -15px;
+      position: absolute;
+      z-index: 12;
+      background: $border-color;
+      top: 55%;
+      transform: translate(100%, -50%);
+      transition: .3s;
+    }
+  }
+}

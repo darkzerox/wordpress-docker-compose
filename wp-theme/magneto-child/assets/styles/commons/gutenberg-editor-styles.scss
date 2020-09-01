@@ -1,0 +1,21 @@
+@import "../commons/variables";
+
+// Gutenberg color options
+// -- see editor-color-palette in functions.php
+$colors: ("blue": $primary,
+  "blue-light": $black,
+  "red": $red,
+  "sky": $blue,
+  "gray": $gray-200,
+);
+
+@each $name,
+$color in $colors {
+  .has-#{$name}-color {
+    color: $color;
+  }
+
+  .has-#{$name}-background-color {
+    background-color: $color;
+  }
+}

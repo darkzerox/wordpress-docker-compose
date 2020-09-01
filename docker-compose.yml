@@ -1,19 +1,26 @@
-version: "3"
+version: "3.8"
 
 services:
   wp:
+    container_name: ${DOMAIN}_wp
     image: wordpress:latest # https://hub.docker.com/_/wordpress/
     ports:
-      - ${IP}:80:80 # change ip if required
+      - 80:80 # change ip if required
     volumes:
       - ./config/php.conf.ini:/usr/local/etc/php/conf.d/conf.ini
       - ./wp-app:/var/www/html # Full wordpress project
+      - ./wp-theme/magnetolabs/:/var/www/html/wp-content/themes/magnetolabs #master template
+      - ./wp-theme/${THEME}/:/var/www/html/wp-content/themes/${THEME}
+
+
+      # - ./plugin-name/trunk/:/var/www/html/wp-content/plugins/plugin-name
+
     environment:
       WORDPRESS_DB_HOST: db
       WORDPRESS_DB_NAME: "${DB_NAME}"
       WORDPRESS_DB_USER: root
       WORDPRESS_DB_PASSWORD: "${DB_ROOT_PASSWORD}"
-      ORDPRESS_DEBUG: 1
+      WORDPRESS_DEBUG: 1
       WORDPRESS_CONFIG_EXTRA: | # Add config to wp-config.php
         define('FS_METHOD', 'direct');
         define('WP_DEBUG_LOG', true);
@@ -22,6 +29,8 @@ services:
       - db
 
   wpcli:
+    container_name: ${DOMAIN}_wpcli
+
     image: wordpress:cli
     volumes:
       - ./config/php.conf.ini:/usr/local/etc/php/conf.d/conf.ini
@@ -31,6 +40,7 @@ services:
       - wp
 
   db:
+    container_name: ${DOMAIN}_db
     image: mysql:latest # https://hub.docker.com/_/mysql/ - or mariadb https://hub.docker.com/_/mariadb
     ports:
       - ${IP}:3306:3306 # change ip if required
@@ -48,9 +58,10 @@ services:
       MYSQL_ROOT_PASSWORD: "${DB_ROOT_PASSWORD}"
   pma: # add phpmyadmin
     image: phpmyadmin/phpmyadmin
-    container_name: phpmyadmin
+    container_name: ${DOMAIN}_phpmyadmin
     restart: always
     ports:
       - "8000:80"
 volumes:
   db_data:
+    name: ${DOMAIN}_db

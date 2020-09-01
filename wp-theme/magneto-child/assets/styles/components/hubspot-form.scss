@@ -1,0 +1,230 @@
+.hbspt-form {
+  background-color: $gray-200;
+  padding: 50px;
+  // box-shadow: 10px 10px 15px 0 rgba(95, 95, 132, 0.08);
+
+  @media (max-width: 768px) {
+    padding: 30px 15px;
+    box-shadow: none;
+    // background-color: transparent;
+  }
+
+  input:not([type="file"]),
+  select {
+    width: 100% !important;
+    height: 40px;
+    font-size: 16px !important;
+    border: 1px solid $border-color;
+    padding: 9px 12px;
+    // font-weight: 200;
+    border-radius: 0;
+    font-family: $font-head;
+  }
+
+  select {
+    padding: 0 12px;
+  }
+
+  fieldset {
+    width: 100%;
+    max-width: unset !important;
+    // margin-bottom: 15px !important;
+  }
+
+  label {
+    position: relative;
+
+    &.hs-error-msg {
+      color: red;
+      font-size: 10px;
+    }
+  }
+
+  textarea {
+    height: 160px;
+    width: 100% !important;
+    border: 1px solid $border-color;
+    border-radius: 0;
+  }
+
+  .inputs-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+
+    p {
+      font-size: 14px;
+    }
+  }
+
+  .form-columns-2 {
+    &>.hs-form-field:first-child {
+      padding-right: 15px;
+    }
+
+    &>.hs-form-field:last-child {
+      padding-left: 15px;
+    }
+
+    @media (max-width: 480px) {
+      .hs-form-field {
+        padding: 0 !important;
+      }
+    }
+  }
+
+  .input {
+    margin-right: 0 !important;
+  }
+
+  .actions {
+    margin-top: 40px;
+    text-align: center;
+
+    .hs-button {
+      margin: auto;
+      text-align: center;
+      background: $primary !important;
+      color: #fff !important;
+      font-size: 18px !important;
+      width: 100% !important;
+      border: 0;
+      height: 50px;
+
+      @include respon-down(md) {
+        font-size: 16px !important;
+      }
+
+      @include respon-up(lg) {
+        max-width: 300px;
+
+
+      }
+    }
+  }
+
+  .hs-form-required {
+    color: red;
+    margin-left: 5px;
+    position: absolute;
+    right: -10px;
+    top: 0;
+  }
+
+  .hs-error-msgs {
+    color: red;
+    font-size: 10px;
+  }
+
+  .hs_error_rollup {
+    display: none;
+  }
+
+  .hs-richtext {
+    font-size: 14px;
+
+    p {
+      font-size: 14px;
+    }
+
+    ul {
+      padding-left: 30px;
+
+      li {
+        font-size: 14px;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  [type="checkbox"],
+  [type="radio"] {
+    display: none;
+  }
+
+  [type="checkbox"]+[data-reactid]:before {
+    content: "\f0c8";
+    position: absolute;
+    left: 0px;
+    font-family: "Font Awesome 5 Pro" !important;
+    font-weight: 200;
+    top: 0px;
+  }
+
+  [type="checkbox"]:checked+[data-reactid]:before {
+    font-weight: bold;
+    content: "\f14a";
+  }
+
+  [type="radio"]+[data-reactid]:before {
+    content: "\f111";
+    position: absolute;
+    left: 0px;
+    font-family: "Font Awesome 5 Pro" !important;
+    font-weight: 200;
+    top: 0px;
+  }
+
+  [type="radio"]:checked+[data-reactid]:before {
+    font-weight: bold;
+    content: "\f192";
+  }
+
+  .hs-form-radio-display span[data-reactid] {
+    padding-left: 25px;
+    font-size: 14px;
+    margin-left: 8px;
+    position: relative;
+  }
+
+
+
+  .hs-form-booleancheckbox-display {
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 0;
+
+  }
+
+  .hs-form-field {
+    margin-bottom: 15px;
+
+    @include respon-down(md) {
+      width: 100%;
+    }
+  }
+}
+
+.hs-form-booleancheckbox-display span[data-reactid] {
+  padding-left: 25px;
+  margin-left: 0 !important;
+  position: relative;
+  font-size: 14px;
+  letter-spacing: 0.44px;
+  line-height: 28px;
+  margin-left: 8px !important;
+  display: block !important;
+}
+
+label.hs-form-checkbox-display {
+  padding-left: 30px;
+  font-size: 14px;
+
+}
+
+legend.hs-field-desc {
+  font-size: 14px;
+}
+
+.legal-consent-container .field.hs-form-field {
+  margin-bottom: 15px !important;
+}
+
+
+.section-contact-form {
+  // background-image: url("../images/contact-form-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

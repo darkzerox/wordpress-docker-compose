@@ -1,0 +1,128 @@
+/* prettier-ignore */
+
+$font-head: 'Kanit',
+sans-serif;
+$font-family-base: 'Sarabun';
+$awesome: "font-awesome";
+$font-blog: 'Sarabun',
+sans-serif;
+
+$html-font-size : 16px !default;
+
+/*
+Bootstrap Default Color
+*/
+// Body
+$body-bg: #fff;
+// Typography
+$font-family-sans-serif: $font-blog;
+$font-family-base: $font-family-sans-serif !default;
+
+
+$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
+
+$font-size-xl: $font-size-base * 1.75 !default; //28
+$font-size-lg: $font-size-base * 1.5 !default; //24
+$font-size-md: $font-size-base * 1.25 !default; //20
+$font-size-xs: $font-size-base * 1.125 !default; //18
+$font-size-sm: $font-size-base * .875 !default; //14
+
+// 3 // 48
+// 2.625 !default; //42
+// 2.5 !default; //40
+// 2.25 !default; //36
+// 2 !default; //32
+// 1.75 !default; //28
+// 1.5 !default; //24
+// 1.25 !default; //20
+// .875 !default; //14
+
+$h1-extra-font-size: $font-size-base * 2.25 !default; //36
+$h1-font-size: $font-size-base * 2.5 !default; //40
+$h2-font-size: $font-size-base * 2 !default; //32
+$h3-font-size: $font-size-base * 1.75 !default; //28
+$h4-font-size: $font-size-base * 1.5 !default; // 24
+$h5-font-size: $font-size-base * 1.25 !default; //20
+$h6-font-size: $font-size-base !default; //16
+
+
+$font-weight-base: 300 !default;
+$line-height-base: 1.5 !default;
+
+// Colors bootstrap
+
+$hover: #F5BF33;
+
+$primary: #EDB115;
+$secondary: #F5BF33;
+
+$primary-color-dark: darken($primary, 3%) !default;
+$primary-color-light: lighten($primary, 3%) !default;
+$secondary-color: lighten($primary, 37.5%) !default;
+$secondary-color-dark: darken($secondary, 3%) !default;
+$secondary-color-light: lighten($secondary, 3%) !default;
+
+
+
+
+$success: #EDB115;
+$info: #17a2b8;
+$warning: #dc3545;
+$danger: #dc3545;
+$light: #fff;
+$dark: #4A4C4B;
+
+$blue: #6582FF;
+$indigo: #6574cd;
+$purple: #6E22E6;
+$pink: #f66d9b;
+$red: #FF0448;
+$orange: #f6993f;
+$yellow: #ffed4a;
+$green: #38c172;
+$teal: #4dc0b5;
+$cyan: #6cb2eb;
+$white: #ffffff !default;
+
+$border-color: #ddd;
+
+$gray-100: #F4F3F2 !default;
+$gray-200: #DDDDDD !default;
+$gray-300: #BCBCBC !default;
+$gray-400: #4A4C4B !default;
+$gray-600: #333333 !default;
+$gray-700: #252525 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: #252525 !default;
+
+
+$gray: $gray-200;
+
+$colors: ("blue": $blue,
+  "indigo": $indigo,
+  "purple": $purple,
+  "pink": $pink,
+  "red": $red,
+  "orange": $orange,
+  "yellow": $yellow,
+  "green": $green,
+  "teal": $teal,
+  "cyan": $cyan,
+  "white": $white,
+  "gray": $gray-600,
+  "gray-dark": $gray-800) !default;
+
+$theme-colors: ("primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark);
+
+
+
+
+$quote-icon: "../images/quote.svg";

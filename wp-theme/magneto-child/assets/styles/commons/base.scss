@@ -1,0 +1,50 @@
+// .container {
+//   max-width: map-get($container-max-widths, 'xl');
+//   width: 100%;
+//   display: block;
+
+
+//   @include respon-down(lg) {
+//     max-width: map-get($container-max-widths, 'lg');
+//   }
+
+//   @include respon-down(md) {
+//     max-width: map-get($container-max-widths, 'md');
+//   }
+
+//   @include respon-down(sm) {
+//     max-width: map-get($container-max-widths, 'sm');
+//   }
+
+//   &.full {
+//     max-width: 100% !important;
+//     width: auto !important;
+//   }
+// }
+
+
+.d-flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+
+.border-0 {
+  border: 0
+}
+
+
+.w-100 {
+  width: 100%;
+}

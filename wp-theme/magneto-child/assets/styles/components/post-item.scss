@@ -1,0 +1,22 @@
+.card {
+  &.border-0 {
+
+    .card-header,
+    .card-body,
+    .card-footer {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .card-header {
+    padding-top: 15px;
+    position: relative;
+  }
+
+  .post-category {
+    position: absolute;
+    top: -29px;
+    left: 0;
+  }
+}

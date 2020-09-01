@@ -1,0 +1,68 @@
+blockquote {
+  max-width: 650px;
+  color: $dark;
+  position: relative;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px 0 30px 70px;
+  margin: 50px auto !important;
+
+  border: 0;
+
+  &:before,
+  &:after {
+    content: "";
+    background-image: url($quote-icon);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 35px;
+    height: 35px;
+
+    @include respon-down(md) {
+      left: 15px;
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  &:before {
+    filter: FlipH;
+    transform: scaleX(-1);
+    left: 0;
+    top: 0;
+  }
+
+  &:after {
+    right: 0;
+    bottom: 0;
+  }
+
+  &>*:first-child {
+    color: $black;
+    margin-top: 10px;
+
+    &:before {
+      content: "";
+      color: $secondary;
+      position: absolute;
+      top: 15px;
+      border-top: solid 1px;
+      width: 30px;
+    }
+  }
+
+  p:last-of-type {
+    margin-bottom: 0;
+  }
+
+  h2 {
+    @include respon-down(md) {
+      font-size: 24px;
+      line-height: 32px !important;
+    }
+  }
+}
